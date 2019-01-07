@@ -1,0 +1,26 @@
+<div class="container" *ngIf="event">
+  <h1>
+    {{event.title}}
+  </h1>
+  <div>
+    <label>Name</label>
+    <input #newName/>
+  </div>
+  <div *ngIf="no_name">
+    <label class="text-danger">Please include a Name!</label>
+  </div>
+    <div>
+      Are you going?
+      <div>
+        <button (click)="isGoing(newName.value)">Yes!</button>
+      <button (click) =isNotGoing(newName.value)>Im not able to make it :(</button>
+      </div>
+      
+    </div>
+    <div>
+      Already Going: {{going}}
+    </div>
+    <div *ngFor="let g of going_people">
+      {{g}}
+    </div>
+  </div>

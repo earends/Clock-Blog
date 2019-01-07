@@ -1,0 +1,14 @@
+.image-right {
+    float: right;
+    width: 100%;
+    
+}
+
+.text-left {
+float: left;
+width: auto;
+}
+
+.image-description-together{
+    display: inline;
+}

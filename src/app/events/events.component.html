@@ -1,0 +1,22 @@
+<div class="container">
+  <h1 class="text-center">
+    Events
+  </h1>
+  <div>
+    <ul class="grid-wrapper">
+      <li class="card" *ngFor="let event of events">
+       <a routerLink="/Events/{{event.id}}" routerLinkActive="active">
+        <div class="app-img-wrapper">
+            <img src="assets/mouse.jpg">
+        </div>
+        <div class="title-bar">
+          <h1>
+            {{event.title}}
+          </h1>
+        </div>
+       </a>
+      </li>
+    </ul>
+  </div>
+</div>
+ 
