@@ -25,10 +25,16 @@
         <label>Description</label>
       </div>
       <div class="text-area">
-      <textarea [(ngModel)]="_post.description"n class="text-area" rows="10">{{description}}</textarea>
+      <textarea  [(ngModel)]="_post.description"n class="text-area" rows="10">{{description}}</textarea>
+      </div>
+      <div>
+        <button (click)="onBold(textArea)">Bold</button>
       </div>
       <button (click)="onPreview()">Preview</button>
       <button (click)="onSubmit()">Submit</button>
+      <label>Pin:</label>
+      <input [(ngModel)]="pin">
+      <label *ngIf="pinWrong" class="text-danger">Wrong Pin</label>
   </div>
  
 

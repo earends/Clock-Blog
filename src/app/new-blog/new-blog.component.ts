@@ -11,8 +11,10 @@ export class NewBlogComponent implements OnInit {
 
   _post = {
     title: "My Awesome title",
-    description: "My Awesome Desciption"
+    description: "My Awesome Description"
   }
+  pinWrong:boolean = false;
+  pin;
   
   constructor() { }
 
@@ -30,7 +32,18 @@ export class NewBlogComponent implements OnInit {
   }
 
   onSubmit() {
-    
+    if (this.pin != 4) {
+      this.pinWrong = true;
+    } else {
+      this.pinWrong = false;
+    }
   }
+
+  onBold(textArea:string) {
+
+  }
+
+
+
 
 }

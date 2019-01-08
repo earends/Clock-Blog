@@ -24,18 +24,18 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ##BackLog
 Front End Functionality
-- Events need date and time of event visualized
 - About page needs to be filled in with picture and text
-- Add post page needs authentication
 - Add post page needs more text editor like abilitys
     - needs ability to showcase paragraphs
     - font size changes
     - bold words
     - underline words
+- create text-select directive link: https://www.bennadel.com/blog/3439-creating-a-medium-inspired-text-selection-directive-in-angular-5-2-10.htm
+
 
 Back End Functionality
 - needs to be created ...
-- needs CRUDE functionality for creating blogs and events
+- needs CRUDE operation functionality for blogs and events
 - needs SQL db intialization
 
 Super Back Log
