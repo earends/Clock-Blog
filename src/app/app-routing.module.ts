@@ -17,7 +17,7 @@ const routes: Routes = [
   {path :'Blogs/:id',component:BlogComponent},
   {path : 'About',component:AboutComponent},
   {path : 'NewBlog',component:NewBlogComponent},
-  {path: 'PreviewBlog',component:PreviewBlogComponent}
+  {path: 'PreviewBlog',component:PreviewBlogComponent},
   {path:'**',component:PagenotfoundComponent}
 ];
 
