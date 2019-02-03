@@ -15,6 +15,7 @@ import { NewBlogComponent } from './new-blog/new-blog.component';
 import { PreviewBlogComponent } from './preview-blog/preview-blog.component';
 import { BoldDirective } from './bold.directive';
 import { TextSelectDirective } from './text-select.directive';
+import { QuillModule } from 'ngx-quill'
 
 
 @NgModule({
@@ -29,13 +30,15 @@ import { TextSelectDirective } from './text-select.directive';
     NewBlogComponent,
     PreviewBlogComponent,
     BoldDirective,
-    TextSelectDirective
+    TextSelectDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    QuillModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
