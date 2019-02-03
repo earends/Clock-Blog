@@ -10,12 +10,21 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NewBlogComponent implements OnInit {
 
   constructor() { }
-  textOutput: any
+  blogOutput: any;
+  isPreview: boolean = true;
   ngOnInit() {
 
   }
 
   onChange(event:any) {
-    this.textOutput = event.html;
+    this.blogOutput = event.html;
+  }
+
+  done() {
+    this.isPreview = true;
+  }
+
+  preview() {
+    this.isPreview = false;
   }
 }
