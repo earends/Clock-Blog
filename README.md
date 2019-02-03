@@ -30,7 +30,8 @@ Front End Functionality
     - font size changes
     - bold words
     - underline words
-- create text-select directive link: https://www.bennadel.com/blog/3439-creating-a-medium-inspired-text-selection-directive-in-angular-5-2-10.htm
+- text editor got from here 
+https://github.com/KillerCodeMonkey/ngx-quill-example
 
 
 Back End Functionality
