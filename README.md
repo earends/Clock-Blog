@@ -37,6 +37,10 @@ Back End Functionality
 - needs to be created ...
 - needs CRUDE operation functionality for blogs and events
 - needs SQL db intialization
+- Stretch Goals
+	- Use azure key vault instead of env variables
+	- use azure reddis cache to save html 
+	- use signal r to create chat in app
 
 Super Back Log
 - styles needs to be added

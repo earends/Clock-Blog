@@ -13,8 +13,6 @@ import { AboutComponent } from './about/about.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { NewBlogComponent } from './new-blog/new-blog.component';
 import { PreviewBlogComponent } from './preview-blog/preview-blog.component';
-import { BoldDirective } from './bold.directive';
-import { TextSelectDirective } from './text-select.directive';
 
 
 @NgModule({
@@ -28,8 +26,6 @@ import { TextSelectDirective } from './text-select.directive';
     PagenotfoundComponent,
     NewBlogComponent,
     PreviewBlogComponent,
-    BoldDirective,
-    TextSelectDirective
   ],
   imports: [
     BrowserModule,
