@@ -1,5 +1,5 @@
 export class Blog {
-    id: number;
+    ID: number;
     Title: string;
     Body: string;
     Author: string;

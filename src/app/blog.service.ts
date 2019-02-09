@@ -37,6 +37,13 @@ export class BlogService {
     );
   }
 
+  postBlog(blog:Blog):Observable<Blog> {
+    return this.http.post<Blog>(this.blog_url, blog, httpOptions).pipe(
+      catchError(this.handleError<Blog>('addBlog'))
+    ); 
+
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.

@@ -1,8 +1,17 @@
 <div class="container">
+  <div>
+    <h1>Title</h1>
+    <input [(ngModel)]="_blog.Title" placeholder="Title">
+  </div>
+  <div>
+      <h1>Author</h1>
+      <input [(ngModel)]="_blog.Author" placeholder="Author">
+    </div>
   <quill-editor (onContentChanged)="onChange($event)" [style]="{height: '300px'}" >
 </quill-editor>
-<div class="container" [innerHTML]="blogOutput">
+<div class="container" [innerHTML]="_blog.Body">
 </div>
+<button type="submit" (click) ="onSubmit()">Submit</button>
 
 
 
