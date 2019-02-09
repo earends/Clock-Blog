@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { NewBlogComponent } from './new-blog/new-blog.component';
 import { PreviewBlogComponent } from './preview-blog/preview-blog.component';
+import { QuillModule } from 'ngx-quill';
 
 
 @NgModule({
@@ -31,7 +32,9 @@ import { PreviewBlogComponent } from './preview-blog/preview-blog.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    QuillModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
