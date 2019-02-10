@@ -11,6 +11,7 @@ import {Location} from '@angular/common';
 })
 export class EventComponent implements OnInit {
   event:Event;
+  
   constructor(
     private _eventService:EventService,
     private route: ActivatedRoute,

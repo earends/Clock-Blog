@@ -34,6 +34,26 @@ export class EventService {
     );
   }
 
+  postEvent(event:Event):Observable<Event> {
+    return this.http.post<Event>(this.event_url, event, httpOptions).pipe(
+      catchError(this.handleError<Event>('addEvent'))
+    ); 
+  }
+
+  deleteEvent (id: number): Observable<Event> {
+    const url = `${this.event_url}/${id}`;
+    return this.http.delete<Event>(url, httpOptions).pipe(
+      catchError(this.handleError<Event>('deleteEvent'))
+    );
+  }
+  
+  updateEvent(event:Event): Observable<Event> {
+    const url = `${this.event_url}/${event.ID}`;
+    return this.http.put(url, event, httpOptions).pipe(
+      catchError(this.handleError<any>('updateEvent'))
+    );
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.

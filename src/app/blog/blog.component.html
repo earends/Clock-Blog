@@ -1,12 +1,11 @@
 <div class="container" *ngIf="blog">
   <h1>
-    {{blog.Title}}
+    {{blog.title}}
   </h1>
-  <div class="container">
-    <div >
-        
-    </div>
+  by
+  <h3>
+    {{blog.author}}
+  </h3>
+  <div class="container" [innerHTML]="blog.body">
   </div>
- 
- 
 </div>

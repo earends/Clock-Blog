@@ -25,12 +25,12 @@ export class BlogService {
   GetBlogs(): Observable<Blog[]>{
     return this.http.get<Blog[]>(this.blog_url)
     .pipe(
-      catchError(this.handleError('getBlog', []))
+      catchError(this.handleError('getBlogs', []))
     );
   }
   
 
-  GetBlog(id:number) :Observable<Blog> {
+  GetBlog(id:number):Observable<Blog> {
    const url = `${this.blog_url}/${id}`;
     return this.http.get<Blog>(url).pipe(
       catchError(this.handleError<Blog>(`getBlog id=${id}`))
@@ -41,7 +41,20 @@ export class BlogService {
     return this.http.post<Blog>(this.blog_url, blog, httpOptions).pipe(
       catchError(this.handleError<Blog>('addBlog'))
     ); 
+  }
 
+  deleteBlog (id: number): Observable<Blog> {
+    const url = `${this.blog_url}/${id}`;
+    return this.http.delete<Blog>(url, httpOptions).pipe(
+      catchError(this.handleError<Blog>('deleteBlog'))
+    );
+  }
+
+  updateParkingSpot(blog:Blog): Observable<Blog> {
+    const url = `${this.blog_url}/${blog.id}`;
+    return this.http.put(url, blog, httpOptions).pipe(
+      catchError(this.handleError<any>('updateSpot'))
+    );
   }
 
   /**

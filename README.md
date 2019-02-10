@@ -47,4 +47,10 @@ Super Back Log
 - styles needs to be added
 - comments for events and blogs
 
+List of stuff to do:
+
+- Finsish blog and event service
+- update each individual pages
+
+
 

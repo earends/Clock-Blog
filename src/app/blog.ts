@@ -1,6 +1,6 @@
 export class Blog {
-    ID: number;
-    Title: string;
-    Body: string;
-    Author: string;
+    id: number;
+    title: string;
+    body: string;
+    author: string;
   }

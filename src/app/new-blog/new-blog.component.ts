@@ -22,13 +22,13 @@ export class NewBlogComponent implements OnInit {
   }
 
   onChange(event:any) {
-    this._blog.Body = event.html;
+    this._blog.body = event.html;
   }
 
   onSubmit() {
     this._blogService.postBlog(this._blog)
     .subscribe(blog => { 
-      this.router.navigate([`/Blog/${blog.ID}`])
+      this.router.navigate([`/Blogs`])
     });
   }
 }
