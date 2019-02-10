@@ -56,3 +56,10 @@ img.app-img{
     bottom: 0;
     background: rgba(0,0,0, 0.3);
 }
+
+
+.title-header {
+    color: blue;  
+    float: right;
+    font-size: 20pt;
+}

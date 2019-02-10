@@ -14,6 +14,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { NewBlogComponent } from './new-blog/new-blog.component';
 import { PreviewBlogComponent } from './preview-blog/preview-blog.component';
 import { QuillModule } from 'ngx-quill';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { QuillModule } from 'ngx-quill';
     PagenotfoundComponent,
     NewBlogComponent,
     PreviewBlogComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
