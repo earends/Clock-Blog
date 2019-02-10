@@ -11,7 +11,6 @@ import {Location} from '@angular/common';
 })
 export class EventComponent implements OnInit {
   event:Event;
-  
   constructor(
     private _eventService:EventService,
     private route: ActivatedRoute,
@@ -27,7 +26,7 @@ export class EventComponent implements OnInit {
   GetEvent() {
     const id = +this.route.snapshot.paramMap.get('id');
     this._eventService.GetEvent(id)
-      .subscribe(e => this.event = e);
+      .subscribe(e => this.event = e)
   }
 
   isGoing(newName:string) {

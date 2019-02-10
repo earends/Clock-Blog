@@ -25,32 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ##BackLog
 Front End Functionality
 - About page needs to be filled in with picture and text
-- Add post page needs more text editor like abilitys
-    - needs ability to showcase paragraphs
-    - font size changes
-    - bold words
-    - underline words
-- text editor got from here 
-https://github.com/KillerCodeMonkey/ngx-quill-example
+- going and not going need to be added to database
+- adding images need to be added to create blog 
+    - use image api 
 
-
-Back End Functionality
-- needs to be created ...
-- needs CRUDE operation functionality for blogs and events
-- needs SQL db intialization
-- Stretch Goals
-	- Use azure key vault instead of env variables
-	- use azure reddis cache to save html 
-	- use signal r to create chat in app
-
-Super Back Log
-- styles needs to be added
-- comments for events and blogs
-
-List of stuff to do:
-
-- Finsish blog and event service
-- update each individual pages
 
 
 
