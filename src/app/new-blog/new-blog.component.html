@@ -1,17 +1,39 @@
-<div class="container">
-  <div>
-    <h1>Title</h1>
-    <input [(ngModel)]="_blog.title" placeholder="Title">
-  </div>
-  <div>
-      <h1>Author</h1>
-      <input [(ngModel)]="_blog.author" placeholder="Author">
+<div *ngIf="!preview" style="margin-top:15px">
+    <div class="form-group">
+      <label >Title</label>
+        <input [(ngModel)]="_blog.title" name="title" type="text" class="form-control" placeholder="The Big Bang">
     </div>
-  <quill-editor (onContentChanged)="onChange($event)" [style]="{height: '300px'}" >
-</quill-editor>
-<div class="container" [innerHTML]="_blog.body">
+    <div class="form-group">
+      <label >Author</label>
+        <input [(ngModel)]="_blog.author" name="author" type="text" class="form-control" placeholder="Alex Neitz">
+    </div>
+    <div>
+      <label >Body</label>
+       <quill-editor [(ngModel)]="editorContent" (onContentChanged)="onChange($event)" [style]="{height: '300px'}" >
+      </quill-editor>
+    </div>
+    <div style="margin-top:5px">
+      <button (click)="onPreview()" class="btn btn-primary">Preview</button>
+      <button (click)="onSubmit()" class="btn btn-primary" style="margin-left: 5px;">Submit</button>
+    </div>
 </div>
-<button type="submit" (click) ="onSubmit()">Submit</button>
+<div *ngIf="preview" style="margin-top:15px">
+  <div>
+    <h1 class="text-center">{{_blog.title}}</h1> 
+    <h4 class="text-center">By {{_blog.author}}</h4>
+  </div>
+  <div class="container" [innerHTML]="_blog.body">
+  </div>
+  <button (click)="onPreview()" class="btn btn-primary">Done</button>
+</div>
+
+
+
+
+ 
+  
+
+
 
 
 

@@ -26,8 +26,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 Front End Functionality
 - About page needs to be filled in with picture and text
 - going and not going need to be added to database
-- adding images need to be added to create blog 
-    - use image api 
+- make a limit for titles of blog/event posts
+    - configure that with the list of blogs and posts
+- figure out how to return blog post data to the quill data editor after context change
+
 
 
 

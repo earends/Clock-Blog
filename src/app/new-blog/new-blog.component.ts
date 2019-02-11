@@ -14,15 +14,24 @@ import {Router} from '@angular/router';
 export class NewBlogComponent implements OnInit {
 
   constructor(private _blogService:BlogService, private router:Router) { }
+  preview: boolean = false;
   blogOutput: any;
   isPreview: boolean = true;
   _blog:Blog = new Blog();
-  ngOnInit() {
+  editorContent: any = '';
 
-  }
+  ngOnInit() {}
 
   onChange(event:any) {
     this._blog.body = event.html;
+  }
+
+  onPreview() {
+    if (this.preview) {
+      this.preview = false;
+    } else {
+      this.preview = true;
+    }
   }
 
   onSubmit() {
