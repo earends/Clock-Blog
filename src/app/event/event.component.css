@@ -1,0 +1,45 @@
+.event-title {
+    color: red;
+    font-size: 30pt;
+    border-bottom: 1px solid black;
+    
+}
+
+.event-left {
+    display: inline-block;
+    width: 50%;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.event-body {
+    border-bottom: 1px solid black;
+    color: blue;
+    padding: 5px;
+}
+.event-date {
+    border-bottom: 1px solid black;
+    color: green;
+}
+.event-right {
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+}
+
+.button {
+    border: black;
+    border-radius: 2px;
+    color: white;
+    background-color: black;
+    margin: 5px;
+}
+
+.input {
+    margin: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+}

@@ -19,6 +19,7 @@ export class EventComponent implements OnInit {
   going = 4;
   going_people = []
   no_name:Boolean = false;
+
   ngOnInit() {
     this.GetEvent();
   }
@@ -28,6 +29,7 @@ export class EventComponent implements OnInit {
     this._eventService.GetEvent(id)
       .subscribe(e => this.event = e)
   }
+
 
   isGoing(newName:string) {
     

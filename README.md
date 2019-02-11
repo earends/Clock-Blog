@@ -28,7 +28,11 @@ Front End Functionality
 - going and not going need to be added to database
 - make a limit for titles of blog/event posts
     - configure that with the list of blogs and posts
-- figure out how to return blog post data to the quill data editor after context change
+- event page needs to be more mobile friendly 
+- going, not, and maybe needs to be configured with backend functionality 
+- list of blogs, events need to be better designed 
+
+
 
 
 

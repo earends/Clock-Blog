@@ -1,29 +1,24 @@
-<div class="container" *ngIf="event">
-  <h1>
-    {{event.title}}
-  </h1>
-  <h3>
-    {{event.eventDate}}
-  </h3>
-  <div>
-    <label>Name</label>
-    <input #newName/>
-  </div>
-  <div *ngIf="no_name">
-    <label class="text-danger">Please include a Name!</label>
-  </div>
-    <div>
-      Are you going?
-      <div>
-        <button (click)="isGoing(newName.value)">Yes!</button>
-      <button (click) =isNotGoing(newName.value)>Im not able to make it :(</button>
-      </div>
-      
+<div *ngIf="event" style="margin-top:15px;">
+    <div class="event-left">
+        <span class="event-title">Clock Club Initiation</span>
+        <div style="margin-top:25px;">
+          <span class="event-date">{{ event.eventDate | date : format : timezone}} </span>
+        </div>
+        <div style="margin-top:25px">
+          <p class="event-body">For example, here are two grid layouts that apply to every device and viewport, from xs to xl. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.</p>
+        </div>
     </div>
-    <div>
-      Already Going: {{going}}
+    <div class="event-right">
+        <div>
+          <label>Name</label>
+          <input type="text" class="input">
+        </div>
+        <div>
+          <button class="button">Going</button>
+          <button class="button">Not Going</button>
+          <button class="button">Maybe</button>
+        </div>
+        
     </div>
-    <div *ngFor="let g of going_people">
-      {{g}}
-    </div>
-  </div>
+    
+</div>
