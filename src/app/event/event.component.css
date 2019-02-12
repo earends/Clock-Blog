@@ -8,9 +8,9 @@
 .event-left {
     display: inline-block;
     width: 50%;
-    border-radius: 10px;
-    padding: 5px;
+    margin: 0 auto 20px auto;
     text-align: center;
+    
 }
 
 .event-body {
@@ -23,9 +23,10 @@
     color: green;
 }
 .event-right {
-    display: inline-block;
-    text-align: center;
     width: 50%;
+    display: inline-block;
+    margin: 0 auto 20px auto;
+    text-align: center;
 }
 
 .button {
@@ -42,4 +43,19 @@
     border-left: none;
     border-right: none;
     border-bottom: 1px solid black;
+}
+
+.grid-wrapper {
+    width: 100%;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.event-divider {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    margin: 10px;
+    overflow: hidden;
+    text-align: center;
 }

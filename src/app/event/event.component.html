@@ -1,5 +1,6 @@
 <div *ngIf="event" style="margin-top:15px;">
-    <div class="event-left">
+  <div class="grid-wrapper">
+    <div class="event-divider">
         <span class="event-title">Clock Club Initiation</span>
         <div style="margin-top:25px;">
           <span class="event-date">{{ event.eventDate | date : format : timezone}} </span>
@@ -8,7 +9,7 @@
           <p class="event-body">For example, here are two grid layouts that apply to every device and viewport, from xs to xl. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.</p>
         </div>
     </div>
-    <div class="event-right">
+    <div class="event-divider">
         <div>
           <label>Name</label>
           <input type="text" class="input">
@@ -20,5 +21,5 @@
         </div>
         
     </div>
-    
+  </div>  
 </div>
