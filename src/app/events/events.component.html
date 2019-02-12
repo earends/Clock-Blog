@@ -9,9 +9,18 @@
       <li class="card" *ngFor="let event of events">
         <a routerLink="/Events/{{event.id}}" routerLinkActive="active">
         <div class="title-bar">
-          <span class="title-text">
-            {{event.title}}
-          </span>
+          <div>
+              <span class="title-text">
+                {{event.title}}
+              </span>
+          </div>
+          <div>
+            <span>
+              {{ event.eventDate | date : format : timezone}} 
+            </span>
+          </div>
+          
+         
         </div>
         </a>
       </li>

@@ -24,6 +24,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ##BackLog
 Front End Functionality
+- need better sample data before any more design configurations
 - About page needs to be filled in with picture and text
 - make a limit for titles of blog/event posts
     - configure that with the list of blogs and posts
@@ -31,6 +32,9 @@ Front End Functionality
 - need to set a pin for creating a blog post
 - going and not going need to be added to database
 - going, not, and maybe needs to be configured with backend functionality 
+- functionaliity to add an event
+- functionality to update, delete blog/event
+
 
 
 
