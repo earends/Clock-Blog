@@ -50,10 +50,10 @@ export class BlogService {
     );
   }
 
-  updateParkingSpot(blog:Blog): Observable<Blog> {
+  updateBlog(blog:Blog): Observable<Blog> {
     const url = `${this.blog_url}/${blog.id}`;
     return this.http.put(url, blog, httpOptions).pipe(
-      catchError(this.handleError<any>('updateSpot'))
+      catchError(this.handleError<any>('updateBlog'))
     );
   }
 

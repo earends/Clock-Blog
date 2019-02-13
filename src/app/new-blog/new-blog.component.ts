@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { Blog } from '../blog';
 import {BlogService} from '../blog.service';
 import {Router} from '@angular/router';

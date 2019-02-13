@@ -1,6 +1,7 @@
 import { Component, Input, AfterViewInit } from '@angular/core';
 import {BlogService} from '../blog.service';
 import {Blog} from '../blog';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-update-blog',
@@ -9,7 +10,7 @@ import {Blog} from '../blog';
 })
 export class UpdateBlogComponent implements AfterViewInit {
 
-  constructor(private _blogService:BlogService) { }
+  constructor(private _blogService:BlogService, private router:Router) { }
 
   isEditBlog:boolean = false;
   preview:boolean = false;
@@ -22,7 +23,6 @@ export class UpdateBlogComponent implements AfterViewInit {
 
   onChange(event:any) {
     this._blog.body = event.html;
-
   }
 
   getBlogs() {
@@ -44,6 +44,9 @@ export class UpdateBlogComponent implements AfterViewInit {
   }
 
   onSubmit() {
-    this.isEditBlog = false;
+    this._blogService.updateBlog(this._blog)
+    .subscribe(blog => { 
+      this.router.navigate([`/Blogs`])
+    });
   }
 }
