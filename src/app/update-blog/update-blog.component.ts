@@ -49,4 +49,11 @@ export class UpdateBlogComponent implements AfterViewInit {
       this.router.navigate([`/Blogs`])
     });
   }
+
+  onDelete() {
+    this._blogService.deleteBlog(this._blog.id)
+    .subscribe(blog => { 
+      this.router.navigate([`/Blogs`])
+    });
+  }
 }

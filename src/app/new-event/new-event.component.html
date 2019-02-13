@@ -1,3 +1,19 @@
-<p>
-  new-event works!
-</p>
+<div>
+    <div class="form-group">
+        <label>Title</label>
+        <input [(ngModel)]="event.title" name="title" type="text" class="form-control" placeholder="The Big Bang">
+    </div>
+    <div class="form-group">
+        <label>Date</label>
+        <input [(ngModel)]="event.eventDate" name="author" type="date" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Location</label>
+        <input name="Location" type="text" class="form-control" placeholder="Fred Hutch">
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <input [(ngModel)]="event.body" name="body" type="text-area" class="form-control" placeholder="Alex Neitz">
+    </div>
+    <button (click)="onSubmit()">Submit</button>
+</div>
