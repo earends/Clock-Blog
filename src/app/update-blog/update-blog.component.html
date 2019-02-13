@@ -1,0 +1,35 @@
+<div *ngIf="!isEditBlog">
+  <div *ngFor="let blog of blogs">
+    <button (click)="onSelectBlog(blog)">{{blog.title}}</button>
+  </div>
+</div>
+<div *ngIf="isEditBlog">
+  <div *ngIf="!preview" style="margin-top:15px">
+    <div class="form-group">
+      <label>Title</label>
+      <input [(ngModel)]="_blog.title" name="title" type="text" class="form-control" placeholder="The Big Bang">
+    </div>
+    <div class="form-group">
+      <label>Author</label>
+      <input [(ngModel)]="_blog.author" name="author" type="text" class="form-control" placeholder="Alex Neitz">
+    </div>
+    <div>
+      <label>Body</label>
+      <quill-editor  (onContentChanged)="onChange($event)" [style]="{height: '300px'}">
+      </quill-editor>
+    </div>
+    <div style="margin-top:5px">
+      <button (click)="onPreview()" class="btn btn-primary">Preview</button>
+      <button (click)="onSubmit()" class="btn btn-primary" style="margin-left: 5px;">Submit</button>
+    </div>
+  </div>
+  <div *ngIf="preview" style="margin-top:15px">
+    <div>
+      <h1 class="text-center">{{_blog.title}}</h1>
+      <h4 class="text-center">By {{_blog.author}}</h4>
+    </div>
+    <div class="container" [innerHTML]="_blog.body">
+    </div>
+    <button (click)="onPreview()" class="btn btn-primary">Done</button>
+  </div>
+</div>

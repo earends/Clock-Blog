@@ -1,0 +1,29 @@
+<div *ngIf="startPage">
+  <div>
+    <button (click)="onNewBlog()">New Blog</button>
+  </div>
+  <div>
+    <button (click)="onUpdateBlog()">Update Blog</button>
+  </div>
+  <div>
+    <button (click)="onNewEvent()">New Event</button>
+  </div>
+  <div>
+    <button (click)="onUpdateEvent()">Update Event</button>
+  </div>
+</div>
+<div *ngIf="!startPage">
+  <div *ngIf="newBlog">
+    <app-new-blog></app-new-blog>
+  </div>
+  <div *ngIf="updateBlog">
+    <app-update-blog></app-update-blog>
+  </div>
+  <div *ngIf="newEvent">
+    <app-new-event></app-new-event>
+  </div>
+  <div *ngIf="updateEvent">
+    <app-update-event></app-update-event>
+  </div>
+  <button (click)="onBack()">Back</button>
+</div>

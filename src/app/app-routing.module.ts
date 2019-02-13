@@ -8,6 +8,7 @@ import {EventsComponent} from './events/events.component';
 import {NewBlogComponent} from './new-blog/new-blog.component';
 import {PreviewBlogComponent} from './preview-blog/preview-blog.component';
 import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
+import {ContentControlComponent} from './content-control/content-control.component';
 
 const routes: Routes = [   
   { path: '', redirectTo: '/Events', pathMatch: 'full' },
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path: 'Blogs',component:BlogsComponent},
   {path :'Blogs/:id',component:BlogComponent},
   {path : 'About',component:AboutComponent},
-  {path : 'NewBlog',component:NewBlogComponent},
+  {path : 'Content',component:ContentControlComponent},
   {path: 'PreviewBlog',component:PreviewBlogComponent},
   {path:'**',component:PagenotfoundComponent}
 ];

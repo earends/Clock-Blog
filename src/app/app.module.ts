@@ -15,6 +15,10 @@ import { NewBlogComponent } from './new-blog/new-blog.component';
 import { PreviewBlogComponent } from './preview-blog/preview-blog.component';
 import { QuillModule } from 'ngx-quill';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NewEventComponent } from './new-event/new-event.component';
+import { UpdateEventComponent } from './update-event/update-event.component';
+import { UpdateBlogComponent } from './update-blog/update-blog.component';
+import { ContentControlComponent } from './content-control/content-control.component';
 
 
 @NgModule({
@@ -29,6 +33,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     NewBlogComponent,
     PreviewBlogComponent,
     NavbarComponent,
+    NewEventComponent,
+    UpdateEventComponent,
+    UpdateBlogComponent,
+    ContentControlComponent,
   ],
   imports: [
     BrowserModule,

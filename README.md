@@ -25,16 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ##BackLog
 Front End Functionality
 - need better sample data before any more design configurations
+    - design list of events and blogs better
 - About page needs to be filled in with picture and text
-- make a limit for titles of blog/event posts
-    - configure that with the list of blogs and posts
-- list of blogs, events need to be better designed 
-- need to set a pin for creating a blog post
-- going and not going need to be added to database
-- going, not, and maybe needs to be configured with backend functionality 
-- functionaliity to add an event
-- functionality to update, delete blog/event
-
+- functionality to update/delete a blog
+    - list the blogs
+    - click on the blog you want to edit 
+    - submit the changes or delete the blog altogether
+- functionality to update/delete an event
+    - list the events
+    - click on the event you want to edit 
+    - submit the changes or delete the event altogether
+- need to add quill editor content to blog post body 
+- need to add location to the event
+- add a lock to the content control page 
+- going and not going functionality to events
 
 
 
