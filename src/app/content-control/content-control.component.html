@@ -11,6 +11,10 @@
   <div>
     <button (click)="onUpdateEvent()">Update Event</button>
   </div>
+  <div class="form-group">
+    <label>Pin</label>
+    <input [(ngModel)]="pin" name="pin" type="number" class="form-control" placeholder="0000">
+  </div>
 </div>
 <div *ngIf="!startPage">
   <div *ngIf="newBlog">

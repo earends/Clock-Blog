@@ -14,14 +14,26 @@ export class ContentControlComponent implements OnInit {
   updateBlog:boolean = false;
   newEvent:boolean = false;
   updateEvent:boolean = false;
+  pin:number;
   constructor() { }
 
   ngOnInit() {
 
   }
 
+  checkPin(pin:number):boolean {
+    if (this.pin == 1234) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 
   onNewBlog() {
+    if (!this.checkPin(this.pin)) {
+      return;
+    }
     this.startPage = false;
     this.newBlog = true;
     this.updateBlog = false;
@@ -30,6 +42,9 @@ export class ContentControlComponent implements OnInit {
   }
 
   onUpdateBlog() {
+    if (!this.checkPin(this.pin)) {
+      return;
+    }
     this.startPage = false;
     this.newBlog = false;
     this.updateBlog = true;
@@ -38,6 +53,9 @@ export class ContentControlComponent implements OnInit {
   }
 
   onNewEvent() {
+    if (!this.checkPin(this.pin)) {
+      return;
+    }
     this.startPage = false;
     this.newBlog = false;
     this.updateBlog = false;
@@ -46,6 +64,9 @@ export class ContentControlComponent implements OnInit {
   }
 
   onUpdateEvent() {
+    if (!this.checkPin(this.pin)) {
+      return;
+    }
     this.startPage = false;
     this.newBlog = false;
     this.updateBlog = false;

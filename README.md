@@ -33,8 +33,16 @@ Front End Functionality
     - submit the changes or delete the event altogether
 - need to add quill editor content to blog post body 
 - need to add location to the event
-- add a lock to the content control page 
 - going and not going functionality to events
+
+-small stuff
+    - date needs to be fixed for ngmodel on update event
+
+- production backlog:
+    - pin for content control page will need to be backed by env or something
+    - azure key vault for backend
+    
+
 
 
 
