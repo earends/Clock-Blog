@@ -34,6 +34,7 @@ Front End Functionality
 - need to add quill editor content to blog post body 
 - need to add location to the event
 - going and not going functionality to events
+    - need to make error message if you dont include name and click going, maybe..etc
 
 -small stuff
     - date needs to be fixed for ngmodel on update event
@@ -41,7 +42,7 @@ Front End Functionality
 - production backlog:
     - pin for content control page will need to be backed by env or something
     - azure key vault for backend
-    
+
 
 
 
