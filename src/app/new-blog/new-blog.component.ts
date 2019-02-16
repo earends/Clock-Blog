@@ -17,7 +17,6 @@ export class NewBlogComponent implements OnInit {
   blogOutput: any;
   isPreview: boolean = true;
   _blog:Blog = new Blog();
-  editorContent: any = '';
 
   ngOnInit() {}
 

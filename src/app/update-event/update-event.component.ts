@@ -28,6 +28,7 @@ export class UpdateEventComponent implements AfterViewInit {
   onSelectEvent(event:Event) {
     this.selectedEvent = event;
     this.isEditEvent = true;
+    console.log(this.selectedEvent.location);
   }
 
   onSubmit() {

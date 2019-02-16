@@ -18,7 +18,7 @@ const httpOptions = {
 
 export class BlogService {
 
-  private blog_url = 'https://localhost:44396/api/Blog';  // URL to web api
+  private blog_url = 'https://clockblogbackend.azurewebsites.net/api/Blog';  // URL to web api
 
   constructor(private http: HttpClient) { }
 

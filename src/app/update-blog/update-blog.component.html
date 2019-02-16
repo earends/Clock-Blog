@@ -15,7 +15,7 @@
     </div>
     <div>
       <label>Body</label>
-      <quill-editor  (onContentChanged)="onChange($event)" [style]="{height: '300px'}">
+      <quill-editor [(ngModel)]="_blog.content" (onContentChanged)="onChange($event)" [style]="{height: '300px'}">
       </quill-editor>
     </div>
     <div style="margin-top:5px">

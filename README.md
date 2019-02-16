@@ -23,25 +23,13 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ##BackLog
-Front End Functionality
-- need better sample data before any more design configurations
-    - design list of events and blogs better
-- About page needs to be filled in with picture and text
-- functionality to update/delete an event
-    - list the events
-    - click on the event you want to edit 
-    - submit the changes or delete the event altogether
-- need to add quill editor content to blog post body 
-- need to add location to the event
-- going and not going functionality to events
-    - need to make error message if you dont include name and click going, maybe..etc
-
--small stuff
-    - date needs to be fixed for ngmodel on update event
-
-- production backlog:
-    - pin for content control page will need to be backed by env or something
-    - azure key vault for backend
+For this to go live we need:
+    - update list of events and blogs
+    - update the content control page design 
+    - add functionality for going and not going
+        - this includes creating services 
+    - need to update date for event stuff (eventDate was changed to a string)
+    - need to add a location to the event 
 
 
 

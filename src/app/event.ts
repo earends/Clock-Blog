@@ -3,6 +3,7 @@ import { BrowserDynamicTestingModule } from "@angular/platform-browser-dynamic/t
 export class Event {
     id: number;
     title: string;
+    location: string;
     body: string;
-    eventDate: Date;
+    eventDate: string;
   }

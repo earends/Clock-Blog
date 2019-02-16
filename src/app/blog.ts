@@ -3,4 +3,5 @@ export class Blog {
     title: string;
     body: string;
     author: string;
+    content: string;
   }

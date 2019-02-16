@@ -14,7 +14,7 @@ const httpOptions = {
 })
 
 export class EventService {
-  private event_url = 'https://localhost:44396/api/Event';  // URL to web api
+  private event_url = 'https://clockblogbackend.azurewebsites.net/api/Event';  // URL to web api
 
   constructor(private http:HttpClient) { 
     
