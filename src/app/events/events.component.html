@@ -8,7 +8,6 @@
     <ul class="grid-wrapper">
       <li class="card" *ngFor="let event of events">
         <a routerLink="/Events/{{event.id}}" routerLinkActive="active">
-        <div class="title-bar">
           <div>
               <span class="title-text">
                 {{event.title}}
@@ -18,10 +17,7 @@
             <span>
               {{ event.eventDate | date : format : timezone}} 
             </span>
-          </div>
-          
-         
-        </div>
+          </div> 
         </a>
       </li>
     </ul>

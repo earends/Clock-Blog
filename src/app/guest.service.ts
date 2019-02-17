@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import {Guest} from './Guest';
+import {Guest} from './guest';
 import { catchError, map, tap } from 'rxjs/operators';
 
 
