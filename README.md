@@ -24,12 +24,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ##BackLog
 For this to go live we need:
-    - update list of events and blogs
-    - update the content control page design 
+    - events need to handle 402 forbidden in a unaproved guest
+    - update list of events and blogs DESIGN
+    - update the content control page design to add new and update approved guest
+        - need two new components 
     - add functionality for going and not going
-        - this includes creating services 
-    - need to update date for event stuff (eventDate was changed to a string)
-    - need to add a location to the event 
+        - need to make service calls for creating new guest and updating guest
+
 
 
 

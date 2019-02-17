@@ -14,6 +14,8 @@ export class ContentControlComponent implements OnInit {
   updateBlog:boolean = false;
   newEvent:boolean = false;
   updateEvent:boolean = false;
+  newGuest:boolean = false;
+  updateGuest:boolean = false;
   pin:number;
   constructor() { }
 
@@ -39,6 +41,8 @@ export class ContentControlComponent implements OnInit {
     this.updateBlog = false;
     this.newEvent = false;
     this.updateEvent = false;
+    this.newEvent = false;
+    this.updateGuest = false;
   }
 
   onUpdateBlog() {
@@ -50,6 +54,8 @@ export class ContentControlComponent implements OnInit {
     this.updateBlog = true;
     this.newEvent = false;
     this.updateEvent = false;
+    this.newEvent = false;
+    this.updateGuest = false;
   }
 
   onNewEvent() {
@@ -61,6 +67,8 @@ export class ContentControlComponent implements OnInit {
     this.updateBlog = false;
     this.newEvent = true;
     this.updateEvent = false;
+    this.newEvent = false;
+    this.updateGuest = false;
   }
 
   onUpdateEvent() {
@@ -72,6 +80,34 @@ export class ContentControlComponent implements OnInit {
     this.updateBlog = false;
     this.newEvent = false;
     this.updateEvent = true;
+    this.newEvent = false;
+    this.updateGuest = false;
+  }
+
+  onNewGuest() {
+    if (!this.checkPin(this.pin)) {
+      return;
+    }
+    this.startPage = false;
+    this.newBlog = false;
+    this.updateBlog = false;
+    this.newEvent = false;
+    this.updateEvent = false;
+    this.newEvent = true;
+    this.updateGuest = false;
+  }
+
+  onUpdateGuest() {
+    if (!this.checkPin(this.pin)) {
+      return;
+    }
+    this.startPage = false;
+    this.newBlog = false;
+    this.updateBlog = false;
+    this.newEvent = false;
+    this.updateEvent = false;
+    this.newEvent = false;
+    this.updateGuest = true;
   }
 
   onBack() {

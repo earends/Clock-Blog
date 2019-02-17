@@ -16,13 +16,14 @@
     </div>
     <div class="event-divider">
         <div>
-          <label>Name</label>
-          <input type="text" class="input">
+          <div *ngIf="nameTag" [innerHTML]="nameTag">   
+          </div>
+          <input [(ngModel)]="guest.name" type="text" class="input">
         </div>
         <div>
-          <button class="button">Going</button>
-          <button class="button">Not Going</button>
-          <button class="button">Maybe</button>
+          <button (click) = "onGoing()" class="button">Going</button>
+          <button (click) = "onNotGoing()" class="button">Not Going</button>
+          <button (click) = "onMaybe()" class="button">Maybe</button>
         </div>
         
     </div>
