@@ -5,6 +5,7 @@ import {Event} from '../event';
 import {Location} from '@angular/common';
 import { Guest } from '../guest';
 import { GuestService } from '../guest.service';
+import { observable } from 'rxjs';
 
 
 @Component({
@@ -77,7 +78,10 @@ export class EventComponent implements OnInit {
         console.log("Update");
         this.guestToUpdate.status = status;
         this._guestService.updateGuest(this.guestToUpdate)
-          .subscribe(e => console.log(e));
+        .subscribe((e) => {
+          console.log(e);
+        },
+        (err) => {console.log(err)});
         this.nameTag = "<span>" + this.guestToUpdate.name + " Is " + this.guestToUpdate.status + "</span>";
       }
       
