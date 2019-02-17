@@ -1,0 +1,11 @@
+<div style="margin-top:25px">
+  <div class="form-group">
+    <label>Name</label>
+    <input [(ngModel)]="guest.name" name="name" type="text" class="form-control" placeholder="Jim ">
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input [(ngModel)]="guest.email" name="email" type="email" class="form-control" placeholder="test@gmail.com">
+  </div>
+  <button (click) = "onSubmit()">Submit</button>
+</div>

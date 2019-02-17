@@ -19,6 +19,8 @@ import { NewEventComponent } from './new-event/new-event.component';
 import { UpdateEventComponent } from './update-event/update-event.component';
 import { UpdateBlogComponent } from './update-blog/update-blog.component';
 import { ContentControlComponent } from './content-control/content-control.component';
+import { NewGuestComponent } from './new-guest/new-guest.component';
+import { UpdateguestComponent } from './updateguest/updateguest.component';
 
 
 @NgModule({
@@ -37,6 +39,8 @@ import { ContentControlComponent } from './content-control/content-control.compo
     UpdateEventComponent,
     UpdateBlogComponent,
     ContentControlComponent,
+    NewGuestComponent,
+    UpdateguestComponent,
   ],
   imports: [
     BrowserModule,

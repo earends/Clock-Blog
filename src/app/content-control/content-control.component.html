@@ -1,20 +1,21 @@
-<div *ngIf="startPage">
+<div class="content-main" *ngIf="startPage">
   <div>
-    <button (click)="onNewBlog()">New Blog</button>
-  </div>
-  <div>
-    <button (click)="onUpdateBlog()">Update Blog</button>
+    <button class="button" (click)="onNewBlog()">New Blog</button>
   </div>
   <div>
-    <button (click)="onNewEvent()">New Event</button>
+    <button class="button" (click)="onUpdateBlog()">Update Blog</button>
   </div>
   <div>
-    <button (click)="onUpdateEvent()">Update Event</button>
+    <button class="button" (click)="onNewEvent()">New Event</button>
   </div>
-  <div class="form-group">
-    <label>Pin</label>
-    <input [(ngModel)]="pin" name="pin" type="number" class="form-control" placeholder="0000">
+  <div>
+    <button class="button" (click)="onUpdateEvent()">Update Event</button>
+    <div class="form-group">
+      <label class="pin-label">Pin</label>
+      <input [(ngModel)]="pin" name="pin" type="number" class="pin" placeholder="0000">
+    </div>
   </div>
+
 </div>
 <div *ngIf="!startPage">
   <div *ngIf="newBlog">

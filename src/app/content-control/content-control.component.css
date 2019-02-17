@@ -1,0 +1,24 @@
+.button {
+    border: black;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    margin: 5px;
+}
+
+.content-main {
+    width: 100%;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.pin-label {
+    margin: 10px;
+}
+
+.pin {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+}
