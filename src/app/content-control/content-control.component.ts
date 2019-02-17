@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {BlogService} from '../blog.service';
 import {Blog} from '../blog';
+import { environment } from '../../environments/environment.prod';
 
 @Component({
   selector: 'app-content-control',
@@ -24,7 +25,7 @@ export class ContentControlComponent implements OnInit {
   }
 
   checkPin(pin:number):boolean {
-    if (this.pin == 1234) {
+    if (this.pin == environment.pin) {
       return true;
     } else {
       return false;
