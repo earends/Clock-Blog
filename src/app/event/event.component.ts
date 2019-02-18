@@ -6,7 +6,7 @@ import {Location} from '@angular/common';
 import { Guest } from '../guest';
 import { GuestService } from '../guest.service';
 import { observable } from 'rxjs';
-
+import { environment } from '../../environments/environment.prod';
 
 @Component({
   selector: 'app-event',
@@ -23,6 +23,7 @@ export class EventComponent implements OnInit {
     private router:Router
     ) { }
 
+  pin:number;
   guestToUpdate:Guest;
   guest:Guest = new Guest();
   nullName:boolean = false;
@@ -63,6 +64,10 @@ export class EventComponent implements OnInit {
   }
 
   handleGuestInput(status:string) {
+    if (!this.checkPin(this.pin)) {
+      this.nameTag = "<span>Incorrect Pin</span>";
+      return;
+    }
     if (this.guest.name != "" && this.guest.name != null) 
     {
       if (this.isNewGuest()) 
@@ -70,8 +75,7 @@ export class EventComponent implements OnInit {
         console.log("new guest");
         this.guest.status = status;
         this._guestService.postGuest(this.guest)
-          .subscribe(e =>  this.router.navigate([`/Events`]));
-         
+          .subscribe(e =>  this.router.navigate([`/Events`]));  
       } 
       else 
       {
@@ -115,6 +119,12 @@ export class EventComponent implements OnInit {
     this.location.back();
   }
 
-
+  checkPin(pin:number):boolean {
+    if (this.pin == environment.guestPin) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
 }

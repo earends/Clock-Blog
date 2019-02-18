@@ -27,11 +27,7 @@ For this to go live we need:
     - events need to handle 402 forbidden in a unaproved guest
         - added window alert figure out better way 
     - update list of events and blogs DESIGN
-    - update the content control page design to add new and update approved guest
-        - need two new components 
-    - update environment variables 
-    - ship this b
-    
+    - take out approved guest from backend and and database
 
 
 

@@ -1,31 +1,37 @@
 <div *ngIf="event" style="margin-top:15px;">
   <div class="grid-wrapper">
     <div class="event-divider">
-        <div>
-          <span class="event-title">{{event.title}}</span>
-        </div>
-        <div>
-          <span>@{{event.location}}</span>
-        </div>
-        <div style="margin-top:25px;">
-          <span class="event-date">{{ event.eventDate | date : format : timezone}} </span>
-        </div>
-        <div style="margin-top:25px">
-          <p class="event-body">{{event.body}}</p>
-        </div>
+      <div>
+        <span class="event-title">{{event.title}}</span>
+      </div>
+      <div>
+        <span>@{{event.location}}</span>
+      </div>
+      <div style="margin-top:25px;">
+        <span class="event-date">{{ event.eventDate | date : format : timezone}} </span>
+      </div>
+      <div style="margin-top:25px">
+        <p class="event-body">{{event.body}}</p>
+      </div>
     </div>
     <div class="event-divider">
-        <div>
-          <div *ngIf="nameTag" [innerHTML]="nameTag">   
-          </div>
-          <input [(ngModel)]="guest.name" type="text" class="input">
+      <div>
+        <div *ngIf="nameTag" [innerHTML]="nameTag">
         </div>
-        <div>
-          <button (click) = "onGoing()" class="button">Going</button>
-          <button (click) = "onNotGoing()" class="button">Not Going</button>
-          <button (click) = "onMaybe()" class="button">Maybe</button>
-        </div>
-        
+        <input class="pin" [(ngModel)]="guest.name" type="text" class="input">
+      </div>
+      <div class="form-group">
+        <label class="pin-label">Pin</label>
+        <input [(ngModel)]="pin" name="pin" type="password" class="pin" placeholder="0000">
+      </div>
+      <div>
+        <button (click)="onGoing()" class="button">Going</button>
+        <button (click)="onNotGoing()" class="button">Not Going</button>
+        <button (click)="onMaybe()" class="button">Maybe</button>
+      </div>
+      
     </div>
-  </div>  
+   
+  </div>
+   <button (click)="goBack()" class="button">Back</button>
 </div>
