@@ -28,10 +28,14 @@
         <button (click)="onGoing()" class="button">Going</button>
         <button (click)="onNotGoing()" class="button">Not Going</button>
         <button (click)="onMaybe()" class="button">Maybe</button>
+        <button (click)="onShowGuests()" class="button">Show Guests</button>
       </div>
-      
+      <div *ngIf="showGuests">
+        <div *ngFor="let g of guests">
+          <span>{{g.name}} is {{g.status}}</span>
+        </div>
+      </div>
     </div>
-   
   </div>
    <button (click)="goBack()" class="button">Back</button>
 </div>

@@ -30,6 +30,7 @@ export class EventComponent implements OnInit {
   no_name:Boolean = false;
   guests:Guest [];
   nameTag = "<span>Name</span>";
+  showGuests:boolean = false;
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
@@ -72,14 +73,12 @@ export class EventComponent implements OnInit {
     {
       if (this.isNewGuest()) 
       {
-        console.log("new guest");
         this.guest.status = status;
         this._guestService.postGuest(this.guest)
           .subscribe(e =>  this.router.navigate([`/Events`]));  
       } 
       else 
       {
-        console.log("Update");
         this.guestToUpdate.status = status;
         this._guestService.updateGuest(this.guestToUpdate)
         .subscribe((e) => {
@@ -102,7 +101,7 @@ export class EventComponent implements OnInit {
     this.guests.forEach(g => {
       console.log(this.guest.name);
       console.log(g.name);
-        if (g.name == this.guest.name) {
+        if (g.name.toLowerCase() == this.guest.name.toLowerCase()) {
           this.guestToUpdate = g;
           return result = false;
         }
@@ -125,6 +124,11 @@ export class EventComponent implements OnInit {
     } else {
       return false;
     }
+  }
+
+  onShowGuests() {
+    console.log(this.guests);
+    this.showGuests = true;
   }
 
 }

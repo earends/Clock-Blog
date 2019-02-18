@@ -24,10 +24,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ##BackLog
 For this to go live we need:
-    - events need to handle 402 forbidden in a unaproved guest
-        - added window alert figure out better way 
     - update list of events and blogs DESIGN
-    - take out approved guest from backend and and database
 
 
 
